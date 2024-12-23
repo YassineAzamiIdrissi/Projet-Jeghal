@@ -1,0 +1,4 @@
+#anchor {
+    -fx-background-image: url("../images/clientBack.jpg");
+    -fx-background-size: cover;
+}

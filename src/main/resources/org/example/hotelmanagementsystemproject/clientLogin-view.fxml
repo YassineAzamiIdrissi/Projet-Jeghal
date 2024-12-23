@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../styles/loginStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelmanagementsystemproject.ViewControllers.ClientLoginController">
+    <children>
+        <Label id="welcomeTitle" layoutX="138.0" layoutY="38.0" style="-fx-font-weight: bold;" text="Bienvenu Dans l'espace client" textAlignment="CENTER" textOverrun="CLIP">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emailInput" layoutX="236.0" layoutY="135.0" prefHeight="25.0" prefWidth="232.0" />
+        <Label id="emailLabel" layoutX="164.0" layoutY="139.0" style="-fx-font-weight: bold;" text="Email : " />
+        <PasswordField fx:id="passInput" layoutX="237.0" layoutY="182.0" prefHeight="25.0" prefWidth="232.0" />
+        <Label id="passLabel" layoutX="147.0" layoutY="186.0" style="-fx-font-weight: bold;" text="Mot de passe : " />
+        <Hyperlink fx:id="linkToRegister" layoutX="413.0" layoutY="255.0" onMouseClicked="#handleRegisterLink" style="-fx-text-fill: yellow; -fx-font-weight: bold;" text="S'inscrire" textFill="#6b6b07" />
+        <Button fx:id="loginBtn" layoutX="401.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#handleLogin" style="-fx-label-padding: 2px 10px 2px 10px; -fx-font-weight: bold; -fx-background-color: yellow;" text="Login" textFill="#4519d7" />
+        <Hyperlink fx:id="linkToEmpSpace" layoutX="94.0" layoutY="319.0" onMouseClicked="#handleMoveEmpSpace" style="-fx-font-weight: bold; -fx-text-fill: white;" text="Je suis employé..">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Hyperlink>
+        <Label fx:id="actionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="290.0" prefHeight="17.0" prefWidth="539.0" style="-fx-text-fill: red; -fx-font-weight: bold;">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

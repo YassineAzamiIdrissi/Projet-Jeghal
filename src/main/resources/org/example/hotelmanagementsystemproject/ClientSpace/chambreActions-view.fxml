@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00FF9C;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelmanagementsystemproject.ViewControllers.ChambreActionsController">
+    <children>
+        <AnchorPane fx:id="empIcon" prefHeight="75.0" prefWidth="603.0" style="-fx-background-color: #FFE31A;" stylesheets="@../../../../styles/EmpPic1.css">
+            <children>
+                <Label fx:id="clientName" layoutX="203.0" layoutY="30.0" style="-fx-font-weight: bold;" text="Réserver chambre N°">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Pane id="empIcon" layoutX="-12.0" layoutY="27.0" prefHeight="54.0" prefWidth="81.0" />
+                <Label fx:id="chambreId" layoutX="365.0" layoutY="25.0" prefHeight="31.0" prefWidth="43.0" style="-fx-font-weight: bold;">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            <Button fx:id="backBtn" layoutY="-8.0" mnemonicParsing="false" onMouseClicked="#backToMain" prefHeight="91.0" prefWidth="57.0" style="-fx-background-color: #FB4141; -fx-text-fill: white; -fx-font-weight: bold;" text="...">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="95.0" layoutY="184.0" prefHeight="31.0" prefWidth="135.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Nombre de jours : " AnchorPane.rightAnchor="380.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="date" layoutX="156.0" layoutY="224.0" prefHeight="31.0" prefWidth="67.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="à partir : " AnchorPane.rightAnchor="380.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nbrJours" layoutX="272.0" layoutY="173.0" prefHeight="25.0" prefWidth="238.0" style="-fx-font-weight: bold; -fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+        <Button fx:id="reserverBtn" layoutX="356.0" layoutY="292.0" mnemonicParsing="false" onMouseClicked="#reserverChmbr" prefHeight="25.0" prefWidth="154.0" style="-fx-background-color: #4e2121;-fx-text-fill: white;-fx-font-weight: bold;" text="Résérver" textFill="#4e2121" />
+        <DatePicker fx:id="fromPicker" layoutX="272.0" layoutY="227.0" prefHeight="25.0" prefWidth="238.0" />
+        <Label layoutX="86.0" layoutY="135.0" prefHeight="31.0" prefWidth="174.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Nombre de personnes : " AnchorPane.rightAnchor="380.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nbrPersonnes" layoutX="272.0" layoutY="130.0" prefHeight="25.0" prefWidth="238.0" style="-fx-font-weight: bold; -fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+      <Label fx:id="feedbackLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="346.0" prefHeight="17.0" prefWidth="603.0" style="-fx-font-weight: bold;" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

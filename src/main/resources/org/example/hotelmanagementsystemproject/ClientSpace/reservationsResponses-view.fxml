@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00FF9C;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.hotelmanagementsystemproject.ViewControllers.ReservationsResponseController">
+    <children>
+        <AnchorPane fx:id="empIcon" prefHeight="0.0" prefWidth="623.0" style="-fx-background-color: #FFE31A;" stylesheets="@../../../../styles/EmpPic1.css">
+            <children>
+                <Label fx:id="clientName" layoutX="227.0" layoutY="34.0" style="-fx-font-weight: bold;" text="Réponses aux résérvations faites: ">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Pane id="empIcon" layoutX="-12.0" layoutY="28.0" prefHeight="54.0" prefWidth="81.0">
+               <children>
+                  <Button fx:id="backBtn" layoutX="11.0" layoutY="-28.0" mnemonicParsing="false" onMouseClicked="#backToMain" prefHeight="81.0" prefWidth="57.0" style="-fx-background-color: #FB4141; -fx-text-fill: white; -fx-font-weight: bold;" text="...">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="chambreTableView" layoutY="100.0" prefHeight="305.0" prefWidth="623.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="100" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="chambre" prefWidth="150" text="chambre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="chambreId" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="nbrPersonnes" prefWidth="150" text="Nombre de personnes">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nbrPersonnes" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="from" prefWidth="150" text="de">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="from" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="nbrDays" prefWidth="150" text="Nuits">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nbrDays" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="status" prefWidth="150" text="status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
